@@ -8,7 +8,7 @@ let game = () => {
     let score_p1 = 0
     let score_p2 = 0
 
-    let ronde = 7;
+    const ronde = 7;
 
     for(let i = 2; i < ronde; i++) {
         let nilai = Math.floor(Math.random() * 3) + 1
