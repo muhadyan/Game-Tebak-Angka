@@ -16,13 +16,9 @@ let game = () => {
             let player1 = prompt("Player 1: masukan angka")
             let player2 = prompt("Player 2: masukan angka")
         
-            if (player1 >= 1 && player2 >= 1) {
+            if ((player1 >= 1 && player2 >= 1) && (player1 <= 3 && player2 <= 3)) {
                 if (player1 == player2) {
                     alert("tebakan tidak boleh sama")
-                    confirm("Ulangi?")
-                    start_ronde()
-                }else if (player1 > 3 || player2 > 3) {
-                    alert("tebakan tidak boleh lebih besar dari 3")
                     confirm("Ulangi?")
                     start_ronde()
                 }else if (player1 != nilai && player2 != nilai) {
@@ -44,12 +40,8 @@ let game = () => {
                     -Player 1:${score_p1}
                     -player 2:${++score_p2}`)
                 }
-            }else if(player1 < 1 || player2 < 1) {
-                alert("tebakan tidak boleh lebih kecil dari 1")
-                confirm("Ulangi?")
-                start_ronde()
             }else {
-                alert("tebakan harus berupa angka")
+                alert("tebakan harus berupa angka 1 sampai 3")
                 confirm("Ulangi?")
                 start_ronde()
             }
